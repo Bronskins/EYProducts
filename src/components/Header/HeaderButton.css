@@ -1,0 +1,119 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@200&display=swap');
+
+img{
+    width: 20px;
+    height: 20px;
+    margin-left: 10px;
+}
+.header-options{
+    height: 100%;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+
+}
+.header-button{
+    width: 190px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 99%;
+    background-color: rgb(113, 110, 110);
+    font-family: 'Roboto Mono', monospace;
+    color: white;
+    font-size: 15px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    box-shadow: 0px 0px 1px black;
+    text-shadow: 1px 1px 1px black;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: all 0.5s;
+}
+
+.header-button:hover{
+    background-color: rgb(240, 182, 11);
+    transition: 0.3s;
+    box-shadow: 0px 2px 30px black;
+    width: 230px;
+    letter-spacing: 5px;
+    color: black;
+
+    text-shadow: 0px 0px 1px  rgb(240, 182, 11);
+    margin: 0px 3px;
+}
+
+@media screen and (min-width: 1001px) and (max-width: 1300px) {
+    .header-options{
+        width: 50%;
+    }
+    .header-button{
+        width: 100%;
+        font-size: 12px;
+    }
+    .header-button img{
+        display: none;
+    }
+
+    .header-button:hover{
+        width: 600px
+    }
+
+
+}
+
+@media screen and (min-width: 1300px){
+    .header-options{
+    width: 50%;
+    }
+}
+
+@media screen and (max-width: 1000px) {
+
+    .header-button{
+        display: none;
+    }
+
+    .header-options .header-hamburguer-menu{
+        width: 65px;
+        margin-right: 10px;
+        height: 95%;
+        content: "";
+        background-color: rgb(113, 110, 110);
+        border: 3px solid rgb(41, 42, 41);
+        border-radius: 10px;
+        box-shadow: 0px 0px 2px black;
+        position: relative;
+        display: flex;
+        justify-content: center;
+    }
+
+    .header-options .header-hamburguer-menu span{
+        width: 70%;
+        background-color: white;
+        height: 6px;
+        position: absolute;
+        top: 9px;
+        border-radius: 5px;
+    }
+
+    .header-options .header-hamburguer-menu span::after{
+        width:100%;
+        background-color: white;
+        content: "";
+        height: 6px;
+        position: absolute;
+        top: 28px;
+        border-radius: 5px;
+    }
+
+    .header-options .header-hamburguer-menu span::before{
+        width:100%;
+        background-color: white;
+        content: "";
+        height: 6px;
+        position: absolute;
+        top: 14px;
+        border-radius: 5px;
+    }
+}

@@ -1,0 +1,84 @@
+.header-welcome{
+    background-color: rgb(240, 182, 11);
+    height: 40px;
+    border: black 1px solid;
+    display: flex;
+    font-family: 'Roboto Mono', monospace;
+    align-items: center;
+    justify-content: space-between;
+    animation-delay: 2s;
+    animation-direction: normal;
+    animation-duration: 1s;
+    z-index: 1;
+    position: relative;
+    animation-name: fadeIn;
+    opacity: 1;
+    animation-fill-mode: backwards;
+}
+
+.header-welcome h3 {
+    margin: 10px
+}
+
+.header-welcome .header-welcome-disclaimer{
+    display: flex;
+    align-items: center;
+}
+
+.header-welcome input {
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+    margin: 10px;
+}
+
+.hide{
+    opacity: 0;
+    animation-name: fadeOut;
+    animation-fill-mode: backwards;
+    animation-duration: 0.5s;
+    animation-delay: 0ms;
+}
+
+@keyframes fadeOut{
+    0%{
+        opacity: 1;
+        bottom: 0px;
+        display: block;
+    }
+
+    100%{
+
+        bottom: 40px;
+        opacity: 0;
+  
+    }
+}
+
+@keyframes fadeIn{
+    0%{
+        opacity: 0;
+        bottom: 40px;
+    }
+
+    100%{
+        opacity: 1;
+        bottom: 0px;
+ 
+    }
+}
+
+@media screen and (max-width: 600px) {
+    
+    .header-welcome h3{
+        font-size: 9px
+    }
+    .header-welcome label{
+        font-size: 9px
+    }
+
+    .header-welcome input {
+        width: 15px;
+        height: 15px;
+    }
+}
